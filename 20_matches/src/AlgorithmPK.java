@@ -1,8 +1,21 @@
 import java.util.Scanner;
 
 class AlgorithmPK{
-    int count;
-    int algorithmComp(int count){
+    public static int count;
+
+    public AlgorithmPK(int count) {
+        this.count = count;
+    }
+
+    public int getCount(int count) {
+        return this.count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public int algorithmComp(int count){
         if (count < 17 && count > 13)
             return count-13;
         if (count < 13 && count > 9)
@@ -19,15 +32,5 @@ class AlgorithmPK{
             return 0;
     }
 
-    void allShow(count){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите количество спичек");
-        count =count-(scanner.nextInt());
-        System.out.println("Компьютер взял ");
-        System.out.println(this.algorithmComp(count));
-        count= count-obj.algorithmComp(count);
-        System.out.println("Всего спичек");
-        System.out.println(count);
-    }
 }
 
